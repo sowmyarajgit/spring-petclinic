@@ -25,19 +25,19 @@ pipeline {
         }        
         }
     
-    // stage ("Sonar Analysis") {
-    //         environment {
-    //            scannerHome = tool 'admin_sonarscanner'
-    //         }
-    //         steps {
-    //             echo '<--------------- Sonar Analysis started  --------------->'
-    //             withSonarQubeEnv('admin_sonarcube') {    
-    //                 sh "${scannerHome}/bin/sonar-scanner"
-    //             echo '<--------------- Sonar Analysis stopped  --------------->'
-    //             }    
+    stage ("Sonar Analysis") {
+            environment {
+               scannerHome = tool 'admin_sonarscanner'
+            }
+            steps {
+                echo '<--------------- Sonar Analysis started  --------------->'
+                withSonarQubeEnv('admin_sonarcube') {    
+                    sh "${scannerHome}/bin/sonar-scanner"
+                echo '<--------------- Sonar Analysis stopped  --------------->'
+                }    
                
-    //         }   
-    //     }
+            }   
+        }
         //  stage("Quality Gate") {
         //     steps {
         //         script {
