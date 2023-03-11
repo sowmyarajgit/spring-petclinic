@@ -387,11 +387,10 @@
     </profile>
   </profiles>
   <distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>a0emveiopzq9t-artifactory-primary-0-releases</name>
-        <url>https://sowmyaraj15.jfrog.io/artifactory/pet_clinic-libs-release-local</url>
-    </repository>
-</distributionManagement>
+		<repository>
+			<id>dev</id>
+			<url>file://jarstaging</url>
+		</repository>
+	</distributionManagement>
 
 </project>
