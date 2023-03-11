@@ -38,20 +38,20 @@ pipeline {
                
             }   
         }
-        //  stage("Quality Gate") {
-        //     steps {
-        //         script {
-        //           echo '<--------------- Sonar Gate Analysis Started --------------->'
-        //             timeout(time: 1, unit: 'HOURS'){
-        //                def qg = waitForQualityGate()
-        //                 if(qg.status !='OK') {
-        //                     error "Pipeline failed due to quality gate failures: ${qg.status}"
-        //                 }
-        //             }  
-        //           echo '<--------------- Sonar Gate Analysis Ends  --------------->'
-        //         }
-        //     }
-        // }
+         stage("Quality Gate") {
+            steps {
+                script {
+                  echo '<--------------- Sonar Gate Analysis Started --------------->'
+                    timeout(time: 1, unit: 'HOURS'){
+                       def qg = waitForQualityGate()
+                        if(qg.status !='OK') {
+                            error "Pipeline failed due to quality gate failures: ${qg.status}"
+                        }
+                    }  
+                  echo '<--------------- Sonar Gate Analysis Ends  --------------->'
+                }
+            }
+        }
                
     //      stage("Jar Publish") {
     //     steps {
