@@ -4,13 +4,13 @@ def registry = 'https://sowmyaraj15.jfrog.io'
 pipeline {
     agent{
         node{
-            label "ansible"
+            label "workstation"
          }
     }
     
-   // environment {
-     //    PATH = "/opt/apache-maven-3.9.0/bin/:$PATH"
-    //}
+   environment {
+         PATH = "/opt/maven-3.9.0/bin/:$PATH"
+    }
 
     stages {
         stage('gitclone') {
