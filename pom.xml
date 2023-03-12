@@ -75,7 +75,7 @@
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.4</version>
         </dependency>
-    </dependencies>
+    
    
 
     <!-- Databases - Uses H2 by default -->
