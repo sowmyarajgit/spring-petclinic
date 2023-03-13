@@ -18,7 +18,7 @@ pipeline {
               git branch: 'main', url: 'https://github.com/sowmyarajgit/spring-petclinic.git'
             }
         }
-        stage('build'){
+        stage('gradle-build'){
             
             steps{
             withGradle(){    
