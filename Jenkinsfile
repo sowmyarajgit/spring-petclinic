@@ -64,7 +64,7 @@ pipeline {
                      def uploadSpec = """{
                           "files": [
                             {
-                              "pattern": "jarstaging/(*)",
+                              
                               "target": "clinic_gradle-gradle-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
