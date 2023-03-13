@@ -65,7 +65,7 @@ pipeline {
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "clinic_gradle-gradle-dev-local/{1}",
+                              "target": "clinic_gradle-gradle-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
