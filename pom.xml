@@ -4,7 +4,7 @@
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
   <version>3.0.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -63,27 +63,7 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Jackson to convert Java object to Json -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.9.4</version>
-        </dependency>
-
-        
-
-         <dependency>       
-           <groupId>xml-apis</groupId>       
-           <artifactId>xml-apis</artifactId>       
-           <version>1.4.01</version>       
-           <scope>compile</scope>     
-         </dependency>
+    
     
    
 
@@ -412,11 +392,6 @@
       </build>
     </profile>
   </profiles>
-  <distributionManagement>
-		<repository>
-			<id>dev</id>
-			<url>file://jarstaging</url>
-		</repository>
-	</distributionManagement>
+  
 
 </project>

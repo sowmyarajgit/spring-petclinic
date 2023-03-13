@@ -8,9 +8,9 @@ pipeline {
          }
     }
     
-   environment {
-         PATH = "/opt/maven-3.9.0/bin/:$PATH"
-    }
+  // environment {
+    //     PATH = "/opt/maven-3.9.0/bin/:$PATH"
+    //}
 
     stages {
         stage('gitclone') {
@@ -21,7 +21,9 @@ pipeline {
         stage('build'){
             
             steps{
-            sh 'mvn clean deploy'
+            withGradle(){    
+            sh './gradlew -v'
+            }
         }        
         }
     
@@ -63,7 +65,7 @@ pipeline {
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "clinic_pet_101-libs-snapshot-local/{1}",
+                              "target": "clinic_gradle-gradle-dev-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
