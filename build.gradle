@@ -8,7 +8,7 @@ plugins {
 apply plugin: 'java'
 
 group = 'org.springframework.samples'
-version = '3.0.0'
+version = '3.0.1'
 sourceCompatibility = '17'
 
 repositories {
